@@ -1,0 +1,25 @@
+{
+  "name": "surreal-spaces-app",
+  "version": "1.0.0",
+  "description": "normie words in surreal spaces out",
+  "main": "main-window.js",
+  "scripts": {
+    "start": "electron .",
+    "build_osx"    : "electron-packager . 'Surreal Spaces' --platform=darwin --arch=x64 --out ~/Desktop/ --overwrite --icon=icon.icns && echo 'Built for OSX'",
+    "build_linux"  : "electron-packager . 'Surreal Spaces' --platform=linux  --arch=x64 --out ~/Desktop/ --overwrite --icon=icon.ico && echo 'Built for LINUX'",
+    "build_win"    : "electron-packager . 'Surreal Spaces' --platform=win32  --arch=x64 --out ~/Desktop/ --overwrite --icon=icon.ico && echo 'Built for WIN'",
+    "build" : "npm run build_osx ; npm run build_linux"
+  },
+  "keywords": [],
+  "author": "Jake Burden <jake@doge.haus>",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-fullwidth-halfwidth-convert": "^0.1.1",
+    "enter-input": "^0.1.0",
+    "menubar": "^5.2.3"
+  },
+  "devDependencies": {
+    "electron": "^1.8.2",
+    "electron-packager": "^11.0.0"
+  }
+}
